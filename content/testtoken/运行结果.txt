@@ -1,0 +1,24 @@
+transformers 版本: 5.19.0
+tokenizer 类型:    TokenizersBackend (is_fast=True)
+词表大小:          128000 (+1280 个 added tokens)
+bos='<｜begin▁of▁sentence｜>'  eos='<｜end▁of▁sentence｜>'  pad='<｜end▁of▁sentence｜>'
+
+文本:  'Hello!'
+ids:   [19923, 3]
+还原:  'Hello!'
+结果:  通过
+
+文本:  '你好，世界！'
+ids:   [30594, 303, 3427, 1175]
+还原:  '你好，世界！'
+结果:  通过
+
+文本:  'DeepSeek V4 tokenizer test 🚀'
+ids:   [53091, 4374, 1465, 721, 22, 17840, 9160, 1950, 7351, 251, 225]
+还原:  'DeepSeek V4 tokenizer test 🚀'
+结果:  通过
+
+chat template 渲染示例:
+<｜begin▁of▁sentence｜><｜User｜>Hi<｜Assistant｜>Hello!<｜end▁of▁sentence｜><｜Assistant｜>
+
+=== 全部通过 ===
