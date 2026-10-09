@@ -1,0 +1,79 @@
+# ============================================================
+#  网站项目通用 .gitignore
+#  覆盖：依赖包 / 构建产物 / 日志 / 测试 / 环境变量与密钥 /
+#        编辑器配置 / 操作系统垃圾文件
+# ============================================================
+
+# ---------- 依赖 ----------
+node_modules/
+bower_components/
+jspm_packages/
+.pnpm-store/
+.pnp.*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# ---------- 构建产物 ----------
+dist/
+build/
+out/
+.output/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.vite/
+*.tsbuildinfo
+
+# ---------- 日志 ----------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---------- 测试 / 覆盖率 ----------
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+cypress/screenshots/
+cypress/videos/
+
+# ---------- 环境变量与密钥（.env.example 请保留并提交） ----------
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# ---------- 编辑器 / IDE ----------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ---------- 操作系统 ----------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---------- 其他 ----------
+.eslintcache
+.stylelintcache
+*.bak
+*.tmp
