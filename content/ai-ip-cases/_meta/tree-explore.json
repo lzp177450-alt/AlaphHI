@@ -1,0 +1,840 @@
+{
+  "xmlTreeTop": {
+    "msg": "xml文件名为空！",
+    "code": 500
+  },
+  "clusterTop": {
+    "msg": "操作成功",
+    "code": 0,
+    "data": [
+      {
+        "key": "10000",
+        "parentkey": "0",
+        "value": "刑事",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "2133",
+        "intCount": 2133
+      },
+      {
+        "key": "20000",
+        "parentkey": "0",
+        "value": "民事",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "2384",
+        "intCount": 2384
+      },
+      {
+        "key": "30000",
+        "parentkey": "0",
+        "value": "行政",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "626",
+        "intCount": 626
+      },
+      {
+        "key": "50000",
+        "parentkey": "0",
+        "value": "国家赔偿",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "52",
+        "intCount": 52
+      },
+      {
+        "key": "40000",
+        "parentkey": "0",
+        "value": "执行",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "405",
+        "intCount": 405
+      }
+    ]
+  },
+  "clusterCivil": {
+    "msg": "操作成功",
+    "code": 0,
+    "data": [
+      {
+        "key": "20000",
+        "parentkey": "0",
+        "value": "民事",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "2384",
+        "intCount": 2384
+      },
+      {
+        "key": "20000515",
+        "parentkey": "20000",
+        "value": "人格权纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "67",
+        "intCount": 67
+      },
+      {
+        "key": "20000516",
+        "parentkey": "20000",
+        "value": "婚姻家庭纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "49",
+        "intCount": 49
+      },
+      {
+        "key": "20000517",
+        "parentkey": "20000",
+        "value": "继承纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "23",
+        "intCount": 23
+      },
+      {
+        "key": "20000519",
+        "parentkey": "20000",
+        "value": "物权保护纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "39",
+        "intCount": 39
+      },
+      {
+        "key": "20000520",
+        "parentkey": "20000",
+        "value": "所有权纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "25",
+        "intCount": 25
+      },
+      {
+        "key": "20000521",
+        "parentkey": "20000",
+        "value": "用益物权纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "7",
+        "intCount": 7
+      },
+      {
+        "key": "20000522",
+        "parentkey": "20000",
+        "value": "担保物权纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "2",
+        "intCount": 2
+      },
+      {
+        "key": "20000524",
+        "parentkey": "20000",
+        "value": "合同纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "624",
+        "intCount": 624
+      },
+      {
+        "key": "20000525",
+        "parentkey": "20000",
+        "value": "不当得利纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "8",
+        "intCount": 8
+      },
+      {
+        "key": "20000527",
+        "parentkey": "20000",
+        "value": "知识产权合同纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "38",
+        "intCount": 38
+      },
+      {
+        "key": "20000528",
+        "parentkey": "20000",
+        "value": "知识产权权属、侵权纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "498",
+        "intCount": 498
+      },
+      {
+        "key": "20000529",
+        "parentkey": "20000",
+        "value": "不正当竞争纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "131",
+        "intCount": 131
+      },
+      {
+        "key": "20000530",
+        "parentkey": "20000",
+        "value": "垄断纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "29",
+        "intCount": 29
+      },
+      {
+        "key": "20000533",
+        "parentkey": "20000",
+        "value": "劳动争议",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "68",
+        "intCount": 68
+      },
+      {
+        "key": "20000534",
+        "parentkey": "20000",
+        "value": "人事争议",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "1",
+        "intCount": 1
+      },
+      {
+        "key": "20000536",
+        "parentkey": "20000",
+        "value": "海事海商纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "115",
+        "intCount": 115
+      },
+      {
+        "key": "20000537",
+        "parentkey": "20000",
+        "value": "与企业有关的纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "3",
+        "intCount": 3
+      },
+      {
+        "key": "20000538",
+        "parentkey": "20000",
+        "value": "与公司有关的纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "109",
+        "intCount": 109
+      },
+      {
+        "key": "20000539",
+        "parentkey": "20000",
+        "value": "合伙企业纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "2",
+        "intCount": 2
+      },
+      {
+        "key": "20000541",
+        "parentkey": "20000",
+        "value": "与破产有关的纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "17",
+        "intCount": 17
+      },
+      {
+        "key": "20000542",
+        "parentkey": "20000",
+        "value": "证券纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "16",
+        "intCount": 16
+      },
+      {
+        "key": "20000543",
+        "parentkey": "20000",
+        "value": "期货交易纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "2",
+        "intCount": 2
+      },
+      {
+        "key": "20000544",
+        "parentkey": "20000",
+        "value": "信托纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "2",
+        "intCount": 2
+      },
+      {
+        "key": "20000545",
+        "parentkey": "20000",
+        "value": "保险纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "50",
+        "intCount": 50
+      },
+      {
+        "key": "20000546",
+        "parentkey": "20000",
+        "value": "票据纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "11",
+        "intCount": 11
+      },
+      {
+        "key": "20000547",
+        "parentkey": "20000",
+        "value": "信用证纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "6",
+        "intCount": 6
+      },
+      {
+        "key": "20000548",
+        "parentkey": "20000",
+        "value": "独立保函纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "10",
+        "intCount": 10
+      },
+      {
+        "key": "20000549",
+        "parentkey": "20000",
+        "value": "侵权责任纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "128",
+        "intCount": 128
+      },
+      {
+        "key": "20000552",
+        "parentkey": "20000",
+        "value": "认定自然人无民事行为能力、限制民事行为能力案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "1",
+        "intCount": 1
+      },
+      {
+        "key": "20000553",
+        "parentkey": "20000",
+        "value": "指定遗产管理人案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "1",
+        "intCount": 1
+      },
+      {
+        "key": "20000555",
+        "parentkey": "20000",
+        "value": "确认调解协议案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "8",
+        "intCount": 8
+      },
+      {
+        "key": "20000556",
+        "parentkey": "20000",
+        "value": "确认生态环境损害赔偿协议案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "1",
+        "intCount": 1
+      },
+      {
+        "key": "20000558",
+        "parentkey": "20000",
+        "value": "监护权特别程序案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "8",
+        "intCount": 8
+      },
+      {
+        "key": "20000561",
+        "parentkey": "20000",
+        "value": "公司清算案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "3",
+        "intCount": 3
+      },
+      {
+        "key": "20000562",
+        "parentkey": "20000",
+        "value": "破产程序案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "27",
+        "intCount": 27
+      },
+      {
+        "key": "20000564",
+        "parentkey": "20000",
+        "value": "申请保全案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "6",
+        "intCount": 6
+      },
+      {
+        "key": "20000565",
+        "parentkey": "20000",
+        "value": "申请人身安全保护令案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "8",
+        "intCount": 8
+      },
+      {
+        "key": "20000566",
+        "parentkey": "20000",
+        "value": "申请人格权侵害禁令案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "1",
+        "intCount": 1
+      },
+      {
+        "key": "20000567",
+        "parentkey": "20000",
+        "value": "仲裁司法审查案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "27",
+        "intCount": 27
+      },
+      {
+        "key": "20000568",
+        "parentkey": "20000",
+        "value": "海事诉讼特别程序案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "8",
+        "intCount": 8
+      },
+      {
+        "key": "20000569",
+        "parentkey": "20000",
+        "value": "申请承认与执行法院判决、仲裁裁决案件",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "21",
+        "intCount": 21
+      },
+      {
+        "key": "20000571",
+        "parentkey": "20000",
+        "value": "公益诉讼",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "88",
+        "intCount": 88
+      },
+      {
+        "key": "20000572",
+        "parentkey": "20000",
+        "value": "第三人撤销之诉",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "24",
+        "intCount": 24
+      },
+      {
+        "key": "20000573",
+        "parentkey": "20000",
+        "value": "执行程序中的异议之诉",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "60",
+        "intCount": 60
+      }
+    ]
+  },
+  "clusterIpChildren": {
+    "msg": "操作成功",
+    "code": 0,
+    "data": [
+      {
+        "key": "20000527",
+        "parentkey": "20000",
+        "value": "知识产权合同纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "1",
+        "count": "38",
+        "intCount": 38
+      },
+      {
+        "key": "20000527150",
+        "parentkey": "20000527",
+        "value": "著作权合同纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "0",
+        "count": "10",
+        "intCount": 10
+      },
+      {
+        "key": "20000527151",
+        "parentkey": "20000527",
+        "value": "商标合同纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "0",
+        "count": "3",
+        "intCount": 3
+      },
+      {
+        "key": "20000527152",
+        "parentkey": "20000527",
+        "value": "发明专利合同纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "0",
+        "count": "2",
+        "intCount": 2
+      },
+      {
+        "key": "20000527155",
+        "parentkey": "20000527",
+        "value": "植物新品种合同纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "0",
+        "count": "1",
+        "intCount": 1
+      },
+      {
+        "key": "20000527156",
+        "parentkey": "20000527",
+        "value": "集成电路布图设计合同纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "0",
+        "count": "2",
+        "intCount": 2
+      },
+      {
+        "key": "20000527157",
+        "parentkey": "20000527",
+        "value": "商业秘密合同纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "0",
+        "count": "2",
+        "intCount": 2
+      },
+      {
+        "key": "20000527158",
+        "parentkey": "20000527",
+        "value": "技术合同纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "0",
+        "count": "10",
+        "intCount": 10
+      },
+      {
+        "key": "20000527159",
+        "parentkey": "20000527",
+        "value": "特许经营合同纠纷",
+        "keyName": "cpwsAl_sort_id",
+        "isHaveChildren": "0",
+        "count": "3",
+        "intCount": 3
+      }
+    ]
+  },
+  "clusterIpGrandchildren": {
+    "20000527:知识产权合同纠纷": {
+      "msg": "操作成功",
+      "code": 0,
+      "data": [
+        {
+          "key": "20000527",
+          "parentkey": "20000",
+          "value": "知识产权合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "1",
+          "count": "38",
+          "intCount": 38
+        },
+        {
+          "key": "20000527150",
+          "parentkey": "20000527",
+          "value": "著作权合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "10",
+          "intCount": 10
+        },
+        {
+          "key": "20000527151",
+          "parentkey": "20000527",
+          "value": "商标合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "3",
+          "intCount": 3
+        },
+        {
+          "key": "20000527152",
+          "parentkey": "20000527",
+          "value": "发明专利合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "2",
+          "intCount": 2
+        },
+        {
+          "key": "20000527155",
+          "parentkey": "20000527",
+          "value": "植物新品种合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "1",
+          "intCount": 1
+        },
+        {
+          "key": "20000527156",
+          "parentkey": "20000527",
+          "value": "集成电路布图设计合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "2",
+          "intCount": 2
+        },
+        {
+          "key": "20000527157",
+          "parentkey": "20000527",
+          "value": "商业秘密合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "2",
+          "intCount": 2
+        },
+        {
+          "key": "20000527158",
+          "parentkey": "20000527",
+          "value": "技术合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "10",
+          "intCount": 10
+        },
+        {
+          "key": "20000527159",
+          "parentkey": "20000527",
+          "value": "特许经营合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "3",
+          "intCount": 3
+        }
+      ]
+    },
+    "20000527150:著作权合同纠纷": {
+      "msg": "操作成功",
+      "code": 0,
+      "data": [
+        {
+          "key": "20000527150",
+          "parentkey": "20000527",
+          "value": "著作权合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "10",
+          "intCount": 10
+        }
+      ]
+    },
+    "20000527151:商标合同纠纷": {
+      "msg": "操作成功",
+      "code": 0,
+      "data": [
+        {
+          "key": "20000527151",
+          "parentkey": "20000527",
+          "value": "商标合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "3",
+          "intCount": 3
+        }
+      ]
+    },
+    "20000527152:发明专利合同纠纷": {
+      "msg": "操作成功",
+      "code": 0,
+      "data": [
+        {
+          "key": "20000527152",
+          "parentkey": "20000527",
+          "value": "发明专利合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "2",
+          "intCount": 2
+        }
+      ]
+    },
+    "20000527155:植物新品种合同纠纷": {
+      "msg": "操作成功",
+      "code": 0,
+      "data": [
+        {
+          "key": "20000527155",
+          "parentkey": "20000527",
+          "value": "植物新品种合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "1",
+          "intCount": 1
+        }
+      ]
+    },
+    "20000527156:集成电路布图设计合同纠纷": {
+      "msg": "操作成功",
+      "code": 0,
+      "data": [
+        {
+          "key": "20000527156",
+          "parentkey": "20000527",
+          "value": "集成电路布图设计合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "2",
+          "intCount": 2
+        }
+      ]
+    },
+    "20000527157:商业秘密合同纠纷": {
+      "msg": "操作成功",
+      "code": 0,
+      "data": [
+        {
+          "key": "20000527157",
+          "parentkey": "20000527",
+          "value": "商业秘密合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "2",
+          "intCount": 2
+        }
+      ]
+    },
+    "20000527158:技术合同纠纷": {
+      "msg": "操作成功",
+      "code": 0,
+      "data": [
+        {
+          "key": "20000527158",
+          "parentkey": "20000527",
+          "value": "技术合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "10",
+          "intCount": 10
+        }
+      ]
+    },
+    "20000527159:特许经营合同纠纷": {
+      "msg": "操作成功",
+      "code": 0,
+      "data": [
+        {
+          "key": "20000527159",
+          "parentkey": "20000527",
+          "value": "特许经营合同纠纷",
+          "keyName": "cpwsAl_sort_id",
+          "isHaveChildren": "0",
+          "count": "3",
+          "intCount": 3
+        }
+      ]
+    }
+  },
+  "advTest": {
+    "IP案由+人工智能": {
+      "total": 1,
+      "ids": [
+        "上海某娱乐信息科技有限公司诉王某著作权合同纠纷案"
+      ]
+    },
+    "IP案由+算法": {
+      "total": 20,
+      "ids": [
+        "某环保科技公司诉济南某信息科技公司、徐某、王某计<em>算</em>机软件开发合同纠纷案",
+        "某美术学院诉某公司委托创作合同纠纷案",
+        "深圳市某投科技有限公司诉某数字科技（集团）有限公司计<em>算</em>机软件开发合同纠纷案",
+        "武汉市某科技有限公司诉武汉某软件有限公司、李某计<em>算</em>机软件开发合同纠纷案",
+        "北京中某网络科技有限公司诉北京盛某网络科技有限公司计<em>算</em>机软件开发合同纠纷案",
+        "上海某生物技术有限公司诉珠海某股份有限公司、某国际控股有限公司技术合同纠纷案",
+        "李某军诉深圳某方公司计<em>算</em>机软件开发合同纠纷案",
+        "福建省某公司诉珠海市某公司计<em>算</em>机软件开发合同纠纷案",
+        "郑某、蒋某诉南京德某餐饮管理服务有限公司特许经营合同纠纷案",
+        "某公司诉某大学技术委托开发合同纠纷案",
+        "北京某科技有限公司诉成都某科技股份有限公司、李某技术合同纠纷案",
+        "上海某科技有限公司诉南京某科技有限公司集成电路布图设计合同纠纷案",
+        "吴某诉徐州某教育咨询有限公司计<em>算</em>机软件开发合同纠纷案",
+        "江某顺诉遵义某泉水有限公司等商标合同纠纷案",
+        "苏州某公司诉南京某公司技术合同纠纷案",
+        " 荥阳某铝业公司诉苏州某宝纳丽金公司专利权转让合同纠纷案",
+        "霍尔果斯某影视传媒公司诉陕西某影视公司著作权合同纠纷案",
+        "某物联有限责任公司诉广州某研究院技术合作开发合同纠纷案",
+        "深圳市某光电科技有限公司诉某电子（上海）股份有限公司集成电路委托开发合同纠纷案",
+        "上海某娱乐信息科技有限公司诉王某著作权合同纠纷案"
+      ]
+    },
+    "IP案由仅案由": {
+      "total": 38,
+      "ids": [
+        "郑某、蒋某诉南京德某餐饮管理服务有限公司特许经营合同纠纷案",
+        "深圳市某投科技有限公司诉某数字科技（集团）有限公司计算机软件开发合同纠纷案",
+        "山东某良种有限公司诉聊城某种业有限公司植物新品种实施许可合同纠纷案",
+        "上海某娱乐信息科技有限公司诉王某著作权合同纠纷案",
+        "某公司诉某大学技术委托开发合同纠纷案",
+        "海南甲公司、海南乙公司诉海口某公司技术转让合同纠纷案",
+        "北京某科技有限公司诉成都某科技股份有限公司、李某技术合同纠纷案",
+        "深圳某公司诉南京某公司、锦某公司侵害集成电路布图设计专有权纠纷案",
+        "深圳某电子设备有限公司诉某机车零部件有限公司专利合同纠纷案",
+        "江某顺诉遵义某泉水有限公司等商标合同纠纷案",
+        "吴某诉徐州某教育咨询有限公司计算机软件开发合同纠纷案",
+        "宁波某汽车销售服务公司诉深圳某数据科技公司技术服务合同纠纷案",
+        "广州某知识产权服务有限公司诉中山市某知识产权运营有限公司专利代理合同纠纷案",
+        "李某军诉深圳某方公司计算机软件开发合同纠纷案",
+        "某物联有限责任公司诉广州某研究院技术合作开发合同纠纷案",
+        "窦某诉北京某影业公司表演合同纠纷案",
+        "重庆市某某软件职业培训学院诉毛某某知识产权合同纠纷案",
+        "某美术学院诉某公司委托创作合同纠纷案",
+        "南京某连锁发展有限公司、江苏某工贸有限公司诉南京某首饰有限责任公司等特许经营合同纠纷案",
+        "柳某甲、柳某乙诉天津某餐饮管理有限公司特许经营合同纠纷案",
+        "某制药公司诉某药物研究公司技术转让合同纠纷案",
+        "四川某科技有限公司诉成都某信息科技有限公司技术合同纠纷案",
+        "上海某生物技术有限公司诉珠海某股份有限公司、某国际控股有限公司技术合同纠纷案",
+        "苏州某公司诉南京某公司技术合同纠纷案",
+        "上海某科技有限公司诉南京某科技有限公司集成电路布图设计合同纠纷案",
+        "海南某药业集团股份有限公司诉广西某制药有限公司专利合同纠纷案",
+        "高某某诉某某国际工程有限公司专利合同纠纷案",
+        "福建某某新材料科技股份有限公司诉陈某及彭州某某新材料科技有限公司商标合同纠纷案",
+        "上海帕某文化用品有限公司诉上海艺某文化用品有限公司、某国际企业股份有限公司商标合同纠纷案",
+        "霍尔果斯某影视传媒公司诉陕西某影视公司著作权合同纠纷案",
+        "深圳市某光电科技有限公司诉某电子（上海）股份有限公司集成电路委托开发合同纠纷案",
+        "宁波某星公司诉宁波某沃公司技术秘密许可使用合同纠纷案",
+        "江苏某科技产业园控股集团有限公司公司诉某动力（江苏）投资有限公司、某动力（常州）发动机有限公司、某动力股份有限公司技术秘密许可使用合同纠纷案",
+        " 荥阳某铝业公司诉苏州某宝纳丽金公司专利权转让合同纠纷案",
+        "福建省某公司诉珠海市某公司计算机软件开发合同纠纷案",
+        "北京中某网络科技有限公司诉北京盛某网络科技有限公司计算机软件开发合同纠纷案",
+        "武汉市某科技有限公司诉武汉某软件有限公司、李某计算机软件开发合同纠纷案",
+        "某环保科技公司诉济南某信息科技公司、徐某、王某计算机软件开发合同纠纷案"
+      ]
+    }
+  }
+}

@@ -1,0 +1,212 @@
+[
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "人工智能",
+    "type": 1,
+    "count": 11
+  },
+  {
+    "mode": "模糊",
+    "field": "qw",
+    "kw": "人工智能",
+    "type": 2,
+    "count": 2767
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "人工智能 著作权",
+    "type": 1,
+    "count": 3
+  },
+  {
+    "mode": "模糊",
+    "field": "qw",
+    "kw": "人工智能 著作权",
+    "type": 2,
+    "count": 3
+  },
+  {
+    "mode": "模糊",
+    "field": "qw",
+    "kw": "人工智能 图片",
+    "type": 2,
+    "count": 3
+  },
+  {
+    "mode": "模糊",
+    "field": "qw",
+    "kw": "AI 著作权",
+    "type": 2,
+    "count": 2
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "算法 商业秘密",
+    "type": 1,
+    "count": 3
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "图生图",
+    "type": 1,
+    "count": 1
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "文生图",
+    "type": 1,
+    "count": "ERR:0"
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "文生视频",
+    "type": 1,
+    "count": "ERR:0"
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "AI绘画",
+    "type": 1,
+    "count": "ERR:0"
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "AI换脸",
+    "type": 1,
+    "count": 1
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "生成式",
+    "type": 1,
+    "count": 2
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "自动生成",
+    "type": 1,
+    "count": 12
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "大语言模型",
+    "type": 1,
+    "count": "ERR:0"
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "语言模型",
+    "type": 1,
+    "count": 1
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "智能体",
+    "type": 1,
+    "count": "ERR:0"
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "虚拟数字人",
+    "type": 1,
+    "count": "ERR:0"
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "数字分身",
+    "type": 1,
+    "count": "ERR:0"
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "声音权",
+    "type": 1,
+    "count": 2
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "智能算法",
+    "type": 1,
+    "count": 1
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "生成内容",
+    "type": 1,
+    "count": 9
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "深度学习",
+    "type": 1,
+    "count": 1
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "人脸识别",
+    "type": 1,
+    "count": 13
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "智能写作",
+    "type": 1,
+    "count": 1
+  },
+  {
+    "mode": "精确",
+    "field": "qw",
+    "kw": "AI生成内容",
+    "type": 1,
+    "count": "ERR:0"
+  },
+  {
+    "mode": "精确",
+    "field": "keyword",
+    "kw": "AI",
+    "type": 1,
+    "count": "ERR:0"
+  },
+  {
+    "mode": "精确",
+    "field": "keyword",
+    "kw": "虚拟数字人",
+    "type": 1,
+    "count": "ERR:0"
+  },
+  {
+    "mode": "精确",
+    "field": "keyword",
+    "kw": "人工智能生成图片",
+    "type": 1,
+    "count": 1
+  },
+  {
+    "mode": "精确",
+    "field": "keyword",
+    "kw": "AI生成声音",
+    "type": 1,
+    "count": 1
+  }
+]

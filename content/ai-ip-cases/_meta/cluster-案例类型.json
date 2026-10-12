@@ -1,0 +1,15 @@
+{
+  "msg": "操作成功",
+  "code": 0,
+  "data": [
+    {
+      "key": "02",
+      "parentkey": "0",
+      "value": "参考案例",
+      "keyName": "cpal_type_id",
+      "isHaveChildren": "0",
+      "count": "11",
+      "intCount": 11
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "2023-09-2-158-005": { "include": true, "cat": "著作权", "note": "人工智能生成文章的作品认定与侵权（“Dreamwriter”智能写作系统）" },
+  "2025-09-1-160-001": { "include": true, "cat": "著作权", "note": "利用生成式人工智能“图生图”生成侵权图片并制作拼图销售（刑事）" },
+  "2023-09-2-158-055": { "include": true, "cat": "著作权", "note": "以AI技术识别音源“听声识剧”，侵害作品信息网络传播权" },
+  "2023-09-2-158-043": { "include": true, "cat": "著作权", "note": "算法分发模式（内容源同步+文本分类算法）下的平台帮助侵权责任" },
+  "2023-09-3-024-008": { "include": true, "cat": "专利", "note": "AI对话系统专利无效行政纠纷（小i机器人诉苹果Siri）" },
+  "2024-13-3-024-002": { "include": true, "cat": "专利", "note": "人脸识别方法专利无效行政纠纷（“获取人脸图像的方法及人脸识别方法与系统”）" },
+  "2024-13-3-024-002": { "include": true, "cat": "专利", "note": "人脸识别方法专利无效行政纠纷（“获取人脸图像的方法及人脸识别方法与系统”）" },
+  "2023-09-2-488-015": { "include": true, "cat": "不正当竞争", "note": "AI语音指令“小度小度”构成受保护的商业标识（混淆行为认定）" },
+  "2024-09-2-182-005": { "include": true, "cat": "不正当竞争", "note": "大数据产品（算法模型加工的衍生数据）财产性权益保护" },
+  "2023-13-2-176-007": { "include": true, "cat": "商业秘密", "note": "源代码与算法分别作为技术秘密的认定标准与举证要求" },
+  "2025-07-2-369-001": { "include": true, "cat": "其他（AI相关）", "note": "“AI陪伴者”虚拟形象侵权·算法规则下的网络服务提供者责任（人格权）" },
+  "2025-07-2-474-001": { "include": true, "cat": "其他（AI相关）", "note": "AI生成声音（文本转语音）侵害声音权益（人格权）" },
+  "2025-07-2-525-001": { "include": true, "cat": "其他（AI相关）", "note": "“AI换脸”深度伪造侵害个人信息（民事公益诉讼）" },
+  "2026-09-2-549-001": { "include": true, "cat": "其他（AI相关）", "note": "AI合成声音发布带货视频侵害人格权益" },
+  "2025-07-2-369-003": { "include": true, "cat": "其他（AI相关）", "note": "算法生成用户画像处理已公开个人信息超出合理范围" },
+  "2024-18-1-266-001": { "include": false, "appendix": true, "title": "张某伟、陈某宇编造、故意传播虚假信息案", "appendixNote": "利用AI技术自动合成虚假灾情视频（刑事）", "id": "7I5EntMzPyCRq4DZo8osY%2BooiTLIrO80PaXNN5sPhAU%3D" },
+  "2024-04-1-374-001": { "include": false, "appendix": true, "title": "龚某某传播淫秽物品牟利案", "appendixNote": "利用云技术、AI技术、爬虫传播淫秽物品（刑事）", "id": "dbZywf26bDe4h%2F%2B2fBmneVZJ09JMglM70OwtJT%2BPHuM%3D" },
+  "2026-18-2-116-001": { "include": false, "appendix": true, "title": "李某诉熊某升房屋租赁合同纠纷案", "appendixNote": "提交AI伪造证据的司法后果（民事诉讼）", "id": "ZpQi6upqIPYie80IMr6fl78XySYTH4Z9QhFfK9M%2FEXY%3D" },
+  "2025-18-2-494-001": { "include": false, "appendix": true, "title": "任某璐诉曹某、北京某国际旅行社有限公司与公司有关的纠纷案", "appendixNote": "提交AI生成“虚假案例”的司法后果（民事诉讼）", "id": "SV0KcrOlJ2X4I0hOyeklpxwSzYFb%2FW7oqG6QdFk0Y1k%3D" },
+  "2023-07-2-008-001": { "include": false, "appendix": true, "title": "黄某诉邵某隐私权纠纷案", "appendixNote": "智能家居设备使用与隐私权冲突", "id": "rsIMxmGltJl9CQI3TZXpDymKOmqaF3UDSU1EslILFOY%3D" },
+  "2023-07-2-525-001": { "include": false, "appendix": true, "title": "杭州市下城区人民检察院诉孙某个人信息保护民事公益诉讼案", "appendixNote": "个人信息非法买卖公益诉讼", "id": "S4Fl1coOwVc8sQe5S5A5Nhiiq223ezCb13h4ebEgPVI%3D" }
+}

@@ -1,0 +1,701 @@
+/* ==========================================================================
+   AI 知识产权判例档案 — 星际法庭 · 判例档案库
+   基于 style.css 的 token 体系（五层蓝色纵深 / 三声部字体 / 角括号面板）
+   法庭元素：列柱立面 · 司法天平 · 印章 · 金铜色装饰 · 法谚
+   ========================================================================== */
+
+:root {
+  --gold: #d6b26e;
+  --gold-dim: rgba(214, 178, 110, 0.38);
+  --gold-glow: rgba(214, 178, 110, 0.28);
+}
+
+/* ---- 图标精灵与司法天平 ---- */
+.svg-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.i-scales {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.12em;
+}
+
+/* ---- 工具条右侧：收录读数 + 语言切换 ---- */
+.utilitybar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+.utilitybar-right .signal-live {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lang-switch {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--hair);
+  flex: none;
+}
+.lang-switch button {
+  padding: 3px 10px 4px;
+  background: transparent;
+  border: 0;
+  color: var(--mute);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: color 0.25s ease, background-color 0.25s ease, text-shadow 0.25s ease;
+}
+.lang-switch button + button { border-left: 1px solid var(--hair); }
+.lang-switch button:hover { color: var(--pulse); }
+.lang-switch button[aria-pressed="true"] {
+  color: var(--gold);
+  background: rgba(214, 178, 110, 0.10);
+  text-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* ---- 紧凑英雄区：法庭立面 ---- */
+.lib-hero {
+  position: relative;
+  padding: clamp(128px, 17vh, 186px) 0 clamp(260px, 34vw, 500px);
+}
+.lib-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(46% 54% at 50% 0%, rgba(214, 178, 110, 0.10), transparent 70%);
+}
+.lib-hero::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 0;
+  height: min(440px, 31vw);
+  pointer-events: none;
+  background:
+    radial-gradient(46% 74% at 50% 108%, rgba(95, 184, 255, 0.10), transparent 72%),
+    radial-gradient(30% 52% at 50% 108%, rgba(214, 178, 110, 0.13), transparent 72%);
+}
+.lib-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(14px, 2.6vh, 26px);
+}
+.lib-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(30px, 1.5rem + 3.6vw, 56px);
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: var(--pulse);
+  text-shadow: 0 0 44px rgba(4, 7, 13, 0.95);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.lib-lede {
+  margin: 0;
+  max-width: 46em;
+  font-family: var(--font-serif);
+  font-size: var(--fs-lg);
+  line-height: 1.9;
+  color: var(--ink);
+  text-shadow: 0 0 30px rgba(4, 7, 13, 0.9);
+}
+.lib-lede b { color: var(--signal); font-weight: 600; }
+
+/* 法谚 */
+.court-maxim {
+  margin: 0;
+  padding-left: 12px;
+  border-left: 2px solid var(--gold-dim);
+  font-family: var(--font-serif);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--gold) 78%, var(--ink));
+}
+.court-maxim span {
+  margin-left: 8px;
+  font-size: 0.92em;
+  color: var(--mute);
+}
+
+/* 法庭立面 SVG */
+.court-svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: clamp(220px, 32vw, 470px);
+  z-index: 0;
+  pointer-events: none;
+}
+.court-svg .ct-line {
+  stroke: color-mix(in srgb, var(--ice) 58%, var(--signal));
+  opacity: 0.8;
+  fill: none;
+  stroke-width: 1.1;
+}
+.court-svg .ct-sig { stroke: var(--signal); opacity: 0.34; fill: none; stroke-width: 1; }
+.court-svg .ct-star { fill: var(--signal); opacity: 0.5; }
+.court-svg .ct-gold {
+  stroke: var(--gold);
+  opacity: 0.95;
+  fill: none;
+  stroke-width: 1.45;
+  filter: drop-shadow(0 0 10px var(--gold-glow));
+}
+
+/* 巨大「法」字水印 */
+.lib-wordmark {
+  position: absolute;
+  top: clamp(96px, 13vh, 150px);
+  right: -0.14em;
+  z-index: 0;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(160px, 26vw, 420px);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--pulse);
+  opacity: 0.045;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* 判例归档印章 */
+.court-seal {
+  position: absolute;
+  top: clamp(150px, 22vh, 220px);
+  right: clamp(24px, 6vw, 72px);
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  width: 84px;
+  height: 84px;
+  padding: 8px;
+  border: 2px solid var(--gold-dim);
+  transform: rotate(-3deg);
+  opacity: 0.95;
+  pointer-events: none;
+}
+.court-seal::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid var(--gold-dim);
+}
+.court-seal span {
+  display: grid;
+  place-items: center;
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--gold);
+  text-shadow: 0 0 12px var(--gold-glow);
+}
+
+/* ---- 分类统计条 ---- */
+.lib-stats-section { padding-bottom: clamp(34px, 5vw, 60px); }
+.lib-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  gap: 1px;
+  background: var(--hair);
+  border: 1px solid var(--hair);
+}
+.lib-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px 16px;
+  background: var(--panel);
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--t-theme) ease, box-shadow var(--t-theme) ease;
+}
+.lib-stat:hover { background: var(--abyss); }
+.lib-stat[aria-pressed="true"] {
+  background: var(--abyss);
+  box-shadow: inset 0 -2px 0 var(--signal);
+}
+.lib-stat b {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: var(--fs-xl);
+  color: var(--signal);
+  letter-spacing: 0.02em;
+}
+.lib-stat span {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  color: var(--mute);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- 判例档案主体 ---- */
+.lib-library,
+.lib-appendix-section {
+  position: relative;
+  padding-block: var(--sect);
+}
+.lib-library { padding-top: clamp(30px, 4vw, 44px); }
+
+.lib-lang-note {
+  margin: -14px 0 20px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  opacity: 0.75;
+}
+
+.lib-toolbar {
+  position: sticky;
+  top: 88px;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  padding: 12px 16px;
+  margin-bottom: clamp(22px, 3vw, 34px);
+  background: var(--panel);
+  background: color-mix(in srgb, var(--void) 80%, transparent);
+  -webkit-backdrop-filter: blur(10px) saturate(1.1);
+  backdrop-filter: blur(10px) saturate(1.1);
+  border: 1px solid var(--hair);
+  transition: background-color var(--t-theme) ease, border-color var(--t-theme) ease;
+}
+@media (max-width: 620px) { .lib-toolbar { top: 58px; } }
+
+.lib-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.lib-chip {
+  padding: 7px 12px;
+  background: var(--abyss);
+  border: 1px solid var(--hair);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+.lib-chip:hover { color: var(--pulse); border-color: var(--signal); }
+.lib-chip[aria-pressed="true"] {
+  color: var(--signal);
+  border-color: var(--signal);
+  background: var(--abyss);
+  text-shadow: 0 0 12px var(--glow);
+}
+.lib-chip i { font-style: normal; margin-left: 6px; color: var(--mute); }
+.lib-chip[aria-pressed="true"] i { color: var(--signal); }
+
+.lib-search input {
+  width: min(300px, 62vw);
+  padding: 9px 12px;
+  background: var(--abyss);
+  border: 1px solid var(--hair);
+  color: var(--pulse);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.04em;
+}
+.lib-search input::placeholder { color: var(--mute); }
+.lib-search input:focus-visible {
+  outline: none;
+  border-color: var(--signal);
+  box-shadow: 0 0 16px var(--glow);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- 判例卷宗卡片 ---- */
+.lib-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2.4vw, 26px);
+}
+@media (max-width: 940px) { .lib-cards { grid-template-columns: 1fr; } }
+
+.case-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: clamp(18px, 2.6vw, 28px);
+  background: var(--panel);
+  border: 1px solid var(--hair);
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+.case-card:hover {
+  background: var(--abyss);
+  border-color: color-mix(in srgb, var(--gold) 42%, var(--hair));
+}
+.case-card.frame::before,
+.case-card.frame::after {
+  border-color: var(--gold);
+  opacity: 0.62;
+}
+.case-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.case-no {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  color: var(--mute);
+}
+.case-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+}
+.case-badge .i-scales { width: 13px; height: 13px; }
+.case-card h3 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: var(--fs-lg);
+  line-height: 1.62;
+  color: var(--pulse);
+}
+.case-note {
+  margin: 0;
+  padding-left: 10px;
+  border-left: 2px solid var(--ice);
+  font-size: var(--fs-sm);
+  color: var(--ink);
+}
+.case-meta {
+  margin: 0;
+  display: grid;
+  gap: 5px;
+  font-size: var(--fs-xs);
+}
+.case-meta div { display: flex; gap: 10px; }
+.case-meta dt {
+  flex: none;
+  min-width: 4.6em;
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  color: var(--mute);
+}
+.case-meta dd { margin: 0; color: var(--ink); }
+.case-summary {
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.8;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.case-keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.case-keys li {
+  padding: 2px 8px;
+  border: 1px solid var(--hair);
+  color: var(--mute);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.case-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+.case-open {
+  padding: 7px 2px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid rgba(95, 184, 255, 0.55);
+  color: var(--signal);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  text-shadow: 0 0 14px var(--glow);
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.case-open:hover { color: var(--pulse); border-bottom-color: var(--pulse); }
+.case-open .ghost-glyph { display: inline-block; margin-left: 6px; transition: transform 0.25s ease; }
+.case-open:hover .ghost-glyph { transform: translateX(4px); }
+.case-src {
+  color: var(--mute);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--hair);
+}
+.case-src:hover { color: var(--signal); border-bottom-color: var(--signal); }
+
+.lib-empty {
+  margin: 0;
+  padding: 46px 20px;
+  border: 1px dashed var(--hair);
+  text-align: center;
+  color: var(--mute);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.12em;
+}
+
+/* ---- 判例全文弹窗（判决卷宗） ---- */
+dialog.case-dialog {
+  width: min(880px, 94vw);
+  max-height: 86vh;
+  padding: 0;
+  background: var(--abyss);
+  color: var(--ink);
+  border: 1px solid var(--ice);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.65);
+}
+dialog.case-dialog::backdrop {
+  background: rgba(4, 7, 13, 0.76);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+dialog.case-dialog.frame::before,
+dialog.case-dialog.frame::after {
+  border-color: var(--gold);
+  opacity: 0.7;
+}
+.case-dialog-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 24px 14px;
+  background: var(--abyss);
+  background: color-mix(in srgb, var(--abyss) 92%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hair);
+}
+.case-dialog-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.dialog-close {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid var(--hair);
+  color: var(--mute);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.dialog-close:hover { color: var(--pulse); border-color: var(--signal); }
+.dialog-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: var(--fs-xl);
+  line-height: 1.5;
+  color: var(--pulse);
+}
+.dialog-sub { margin: 0; color: var(--mute); font-size: var(--fs-sm); }
+.dialog-badge-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.dialog-note {
+  margin: 0;
+  padding-left: 10px;
+  border-left: 2px solid var(--ice);
+  font-size: var(--fs-sm);
+  color: var(--signal);
+}
+.case-dialog-body {
+  overflow: auto;
+  padding: 8px 24px 26px;
+}
+.dialog-meta {
+  margin: 10px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(20px, 4vw, 48px);
+}
+@media (max-width: 640px) { .dialog-meta { grid-template-columns: 1fr; } }
+.dialog-keys { margin-top: 18px; }
+.dialog-section { margin-top: 26px; }
+.dialog-section h4 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 10px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.26em;
+  color: var(--gold);
+}
+.dialog-section h4::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--gold-dim);
+}
+.dialog-section p {
+  margin: 0.6em 0 0;
+  font-family: var(--font-serif);
+  font-size: var(--fs-base);
+  line-height: 1.95;
+  color: var(--ink);
+}
+.dialog-section p:first-of-type { margin-top: 0; }
+.dialog-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid var(--hair);
+}
+
+/* ---- 附录 ---- */
+.lib-appendix {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  background: var(--hair);
+  border: 1px solid var(--hair);
+}
+.lib-appendix li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 18px;
+  padding: 14px 18px;
+  background: var(--panel);
+  list-style: none;
+}
+.lib-appendix a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.lib-appendix a:hover { color: var(--pulse); border-bottom-color: var(--signal); }
+.ap-note {
+  color: var(--mute);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+}
+.ap-link {
+  margin-left: auto;
+  color: var(--signal) !important;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+.lib-source-note {
+  margin: 18px 0 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  color: var(--mute);
+}
+
+/* ---- 载入编排补位（data-boot 5） ---- */
+html.is-ready [data-boot="5"] { animation: boot-in 0.9s ease both; animation-delay: 2.35s; }
+
+/* ---- 降级：减少动态效果 ---- */
+@media (prefers-reduced-motion: reduce) {
+  .lib-stat,
+  .lib-toolbar,
+  .case-card,
+  .case-open,
+  .case-open .ghost-glyph,
+  .dialog-close,
+  .lib-chip,
+  .lib-appendix a { transition: none !important; }
+  .court-svg .ct-gold { filter: none; }
+}
+
+/* ---- 响应式 ---- */
+@media (max-width: 760px) {
+  .court-seal { display: none; }
+}
+@media (max-width: 620px) {
+  .utilitybar.utilitybar-lib {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .utilitybar-lib .crumbs,
+  .utilitybar-lib .signal-live { display: none; }
+  .lib-hero { padding-top: 118px; padding-bottom: 215px; }
+  .court-svg { height: 170px; }
+  .lib-wordmark { font-size: clamp(110px, 34vw, 180px); top: 96px; }
+  .lib-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lib-toolbar { flex-direction: column; align-items: stretch; }
+  .lib-search input { width: 100%; }
+  .case-foot { flex-wrap: wrap; }
+}

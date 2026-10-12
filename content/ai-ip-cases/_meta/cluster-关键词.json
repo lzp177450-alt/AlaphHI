@@ -1,0 +1,111 @@
+{
+  "msg": "操作成功",
+  "code": 0,
+  "data": [
+    {
+      "key": "民事",
+      "parentkey": "0",
+      "value": "民事",
+      "count": "8",
+      "intCount": 8
+    },
+    {
+      "key": "不正当竞争",
+      "parentkey": "0",
+      "value": "不正当竞争",
+      "count": "3",
+      "intCount": 3
+    },
+    {
+      "key": "人工智能",
+      "parentkey": "0",
+      "value": "人工智能",
+      "count": "3",
+      "intCount": 3
+    },
+    {
+      "key": "人格权",
+      "parentkey": "0",
+      "value": "人格权",
+      "count": "2",
+      "intCount": 2
+    },
+    {
+      "key": "独创性",
+      "parentkey": "0",
+      "value": "独创性",
+      "count": "2",
+      "intCount": 2
+    },
+    {
+      "key": "AI生成声音",
+      "parentkey": "0",
+      "value": "AI生成声音",
+      "count": "1",
+      "intCount": 1
+    },
+    {
+      "key": "“图生图”",
+      "parentkey": "0",
+      "value": "“图生图”",
+      "count": "1",
+      "intCount": 1
+    },
+    {
+      "key": "不作详细描述",
+      "parentkey": "0",
+      "value": "不作详细描述",
+      "count": "1",
+      "intCount": 1
+    },
+    {
+      "key": "与公司有关的纠纷",
+      "parentkey": "0",
+      "value": "与公司有关的纠纷",
+      "count": "1",
+      "intCount": 1
+    },
+    {
+      "key": "专利权无效",
+      "parentkey": "0",
+      "value": "专利权无效",
+      "count": "1",
+      "intCount": 1
+    },
+    {
+      "key": "专利相关行政案件",
+      "parentkey": "0",
+      "value": "专利相关行政案件",
+      "count": "1",
+      "intCount": 1
+    },
+    {
+      "key": "个人信息",
+      "parentkey": "0",
+      "value": "个人信息",
+      "count": "1",
+      "intCount": 1
+    },
+    {
+      "key": "人工智能生成图片",
+      "parentkey": "0",
+      "value": "人工智能生成图片",
+      "count": "1",
+      "intCount": 1
+    },
+    {
+      "key": "人工智能生成技术",
+      "parentkey": "0",
+      "value": "人工智能生成技术",
+      "count": "1",
+      "intCount": 1
+    },
+    {
+      "key": "企业字号",
+      "parentkey": "0",
+      "value": "企业字号",
+      "count": "1",
+      "intCount": 1
+    }
+  ]
+}
