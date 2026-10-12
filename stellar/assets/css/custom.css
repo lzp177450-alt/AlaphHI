@@ -1,0 +1,25 @@
+/*
+	自定义样式（在 main.css 之后加载）
+	仅做三处最小改动，不改动模板布局、配色与交互：
+
+	1) 中文字体回退 —— 模板默认字体 Source Sans Pro 不含中文字形，
+	   已移除 main.css 中的 Google Fonts 外链（保证离线 / file:// 可用），
+	   这里补上常见中文字体回退链。
+	2) 中文标题取消负字距 —— 模板的 -0.025em 字距针对拉丁字母设计，
+	   中文字符下会显得拥挤，恢复为 0。
+	3) 页脚联系方式标签不换行 —— 模板 dl.alt dt 固定 3em 宽，
+	   四字中文标签（如「工作时间」）会折成两行，改为随内容自适应。
+*/
+
+body, input, select, textarea {
+	font-family: "Source Sans Pro", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Hiragino Sans GB", "Heiti SC", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, #header p {
+	letter-spacing: 0;
+}
+
+#footer dl.alt dt {
+	width: auto;
+	white-space: nowrap;
+}

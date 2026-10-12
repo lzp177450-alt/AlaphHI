@@ -1,0 +1,297 @@
+/*
+	产品供应页样式（列表 / 物流查询 / 详情）
+	设计语言对齐 main.css：8px 圆角、1px 细边框、
+	配色取自模板统计色板（#efa8b0 / #c79cc8 / #a89cc8 / #9bb2e1 / #8cc9f0）。
+*/
+
+/* ---------- 工具栏：分类筛选 + 搜索 ---------- */
+
+.prod-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.9em 1em;
+	margin: 0 0 1em 0;
+}
+
+.prod-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+
+/* 注意：模板对 #main button 设了透明底 + #636363 !important，
+   筛选按钮需要以 #main 前缀 + !important 覆盖（含选中态）。 */
+#main .prod-chip {
+	appearance: none;
+	-webkit-appearance: none;
+	border: 0;
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.95em;
+	line-height: 1;
+	min-width: 0;
+	padding: 0.55em 1em;
+	border-radius: 8px;
+	background-color: #f4f4f4;
+	box-shadow: none;
+	color: #636363 !important;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+	#main .prod-chip:hover {
+		background-color: #ebebeb;
+	}
+
+	#main .prod-chip.is-active {
+		background-color: #8cc9f0;
+		color: #ffffff !important;
+		box-shadow: none;
+	}
+
+.prod-search {
+	flex: 1 1 12em;
+	max-width: 15em;
+	min-width: 11em;
+}
+
+	.prod-search input {
+		height: 2.5em;
+		font-size: 0.95em;
+		border-color: #dddddd;
+		background-color: #f7f7f7;
+	}
+
+@media screen and (max-width: 980px) {
+
+	.prod-search {
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
+
+}
+
+.prod-count {
+	font-size: 0.85em;
+	color: #9a9a9a;
+	margin: 0 0 1.75em 0;
+}
+
+/* ---------- 产品卡片网格 ---------- */
+
+.prod-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+	gap: 1.25em;
+	list-style: none;
+	margin: 0 0 2.5em 0;
+	padding: 0;
+}
+
+.prod-card {
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	border: solid 1px #e4e4e4;
+	border-radius: 8px;
+	overflow: hidden;
+	transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+	.prod-card:hover {
+		box-shadow: 0 12px 26px rgba(0, 0, 0, 0.09);
+		transform: translateY(-2px);
+	}
+
+.prod-media {
+	display: block;
+	position: relative;
+	aspect-ratio: 16 / 10;
+	overflow: hidden;
+	background-color: #f2f2f2;
+}
+
+	.prod-media img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.4s ease;
+	}
+
+	.prod-card:hover .prod-media img {
+		transform: scale(1.04);
+	}
+
+.prod-badges {
+	position: absolute;
+	top: 0.6em;
+	left: 0.6em;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35em;
+}
+
+.prod-badge {
+	font-size: 0.72em;
+	line-height: 1;
+	padding: 0.4em 0.6em;
+	border-radius: 6px;
+	color: #ffffff;
+	background-color: #efa8b0;
+}
+
+.prod-body {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35em;
+	flex: 1;
+	padding: 1.05em 1.25em 1.25em 1.25em;
+}
+
+	.prod-body h3 {
+		margin: 0;
+		font-size: 1.12em;
+	}
+
+		.prod-body h3 a {
+			color: #636363;
+			border-bottom: 0;
+		}
+
+		.prod-body h3 a:hover {
+			color: #8cc9f0;
+		}
+
+.prod-cat {
+	font-size: 0.78em;
+	letter-spacing: 0.06em;
+	color: #a0a0a0;
+	margin: 0;
+}
+
+.prod-model {
+	font-size: 0.8em;
+	color: #9a9a9a;
+	margin: 0;
+}
+
+.prod-quick {
+	list-style: none;
+	margin: 0.35em 0 0 0;
+	padding: 0;
+	font-size: 0.85em;
+	color: #8a8a8a;
+}
+
+	.prod-quick li {
+		padding: 0.12em 0;
+	}
+
+		.prod-quick li:before {
+			content: '·';
+			font-weight: 700;
+			color: #c9c9c9;
+			margin-right: 0.5em;
+		}
+
+.prod-note {
+	margin: 0.45em 0 0 0;
+	font-size: 0.88em;
+	color: #9a9a9a;
+}
+
+.prod-actions {
+	display: flex;
+	gap: 0.5em;
+	margin-top: auto;
+	padding-top: 1em;
+}
+
+	.prod-actions .button {
+		flex: 1;
+		min-width: 0;
+	}
+
+.prod-empty {
+	text-align: center;
+	color: #9a9a9a;
+	padding: 2.5em 0;
+	margin: 0;
+}
+
+/* ---------- 物流查询 ---------- */
+
+.track-form {
+	display: flex;
+	gap: 0.75em;
+	max-width: 34em;
+	margin: 0 auto 1.1em auto;
+}
+
+	.track-form input {
+		flex: 1 1 auto;
+		min-width: 0;
+		border-color: #dddddd;
+		background-color: #f7f7f7;
+	}
+
+	.track-form .button {
+		flex: 0 0 auto;
+		white-space: nowrap;
+	}
+
+.track-hint {
+	font-size: 0.88em;
+	color: #9a9a9a;
+	margin: 0;
+}
+
+	.track-hint.is-error {
+		color: #e2727f;
+	}
+
+@media screen and (max-width: 480px) {
+
+	.track-form {
+		flex-direction: column;
+	}
+
+}
+
+/* ---------- 产品详情页 ---------- */
+
+.prod-banner {
+	margin-bottom: 2em;
+}
+
+.prod-points {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+	gap: 0.55em;
+	list-style: none;
+	margin: 0 0 2.5em 0;
+	padding: 0;
+}
+
+	.prod-points li {
+		position: relative;
+		padding-left: 1.6em;
+	}
+
+		.prod-points li:before {
+			content: '\f00c';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			color: #8cc9f0;
+			position: absolute;
+			left: 0;
+			top: 0.15em;
+			font-size: 0.9em;
+		}
+
+.prod-table td:first-child {
+	width: 9em;
+	color: #9a9a9a;
+}

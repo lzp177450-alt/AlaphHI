@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	单页站首页：公司背景 / 服务能力 / 产品目录 / 物流查询 / 联系我们（锚点平滑滚动）
+	- 中英双语：文案字典在 assets/js/site.js（data-i18n 属性驱动）
+	- 产品数据：assets/js/products-data.js；卡片点击打开详情弹窗
+	- 移动端：顶部汉堡抽屉导航（≤736px）；桌面：模板导航条滚动收缩
+	模板版权署名 Design: HTML5 UP 需保留（CCA 3.0）
+
+	TODO（醒目占位，替换后即可上线）：
+	1. 【公司名称】/【Company Name】 → 公司全称（页面与字典中均有）
+	2. 【公司地址】【联系电话】【联系邮箱】 → 真实联系方式（页脚与 CTA）
+	3. images/pic01.jpg → 公司实景图；images/prod-*.jpg → 产品图
+	4. og:url / og:image 中的 https://example.com/stellar/ → 实际部署地址
+-->
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>【公司名称】｜一站式企业产品供应与配套服务</title>
+		<meta name="description" content="专注企业级产品供应与配套服务：多品类选品与集中采购、全国仓储配送、质保与售后支持。在线查看产品目录、规格参数与物流查询，支持中英双语浏览。" />
+		<meta name="theme-color" content="#5f4d93" />
+		<link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+
+		<!-- Open Graph / 社交分享 -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="【公司名称】" />
+		<meta property="og:title" content="【公司名称】｜一站式企业产品供应与配套服务" />
+		<meta property="og:description" content="多品类选品与集中采购、全国仓储配送、质保与售后支持——面向经销商、工程配套与企业集采客户的稳定供应伙伴。" />
+		<meta property="og:url" content="https://example.com/stellar/" />
+		<meta property="og:image" content="https://example.com/stellar/images/og-cover.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:locale" content="zh_CN" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="【公司名称】｜一站式企业产品供应与配套服务" />
+		<meta name="twitter:description" content="多品类选品与集中采购、全国仓储配送、质保与售后支持——稳定的企业产品供应伙伴。" />
+		<meta name="twitter:image" content="https://example.com/stellar/images/og-cover.png" />
+
+		<script>
+			/* 提前应用已保存的语言，减少切换闪烁 */
+			(function () {
+				try {
+					if (localStorage.getItem('stellar-lang') === 'en') document.documentElement.lang = 'en';
+				} catch (e) { /* 隐私模式下忽略 */ }
+			})();
+		</script>
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="stylesheet" href="assets/css/products.css" />
+		<link rel="stylesheet" href="assets/css/site.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- 移动端顶栏（≤736px 显示）：品牌 + 语言切换 + 汉堡按钮 -->
+		<div class="topbar" id="topbar">
+			<a class="topbar-brand" href="#top" data-i18n="brand">【公司名称】</a>
+			<div class="topbar-actions">
+				<div class="lang-switch" role="group" data-i18n-aria="langAria">
+					<button type="button" data-lang="zh" aria-pressed="true">中</button>
+					<button type="button" data-lang="en" aria-pressed="false">EN</button>
+				</div>
+				<button class="hamburger" id="navToggle" type="button" aria-expanded="false" aria-controls="navDrawer" data-i18n-aria="menuOpen">
+					<span class="hamburger-box"><span class="hamburger-inner"></span></span>
+				</button>
+			</div>
+		</div>
+		<div class="nav-backdrop" id="navBackdrop"></div>
+		<nav class="nav-drawer" id="navDrawer" data-i18n-aria="drawerAria">
+			<ul>
+				<li><a href="#intro" data-i18n="navIntro">公司背景</a></li>
+				<li><a href="#services" data-i18n="navServices">服务能力</a></li>
+				<li><a href="#products" data-i18n="navProducts">产品目录</a></li>
+				<li><a href="#logistics" data-i18n="navLogistics">物流查询</a></li>
+				<li><a href="#cta" data-i18n="navContact">联系我们</a></li>
+			</ul>
+		</nav>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<h1 data-i18n="brand">【公司名称】</h1>
+						<p><span data-i18n="brandLine1">一站式企业产品供应与配套服务</span><br />
+						<span data-i18n="brandLine2">从选品、报价到交付与售后，一次对接，全流程负责</span></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active" data-i18n="navIntro">公司背景</a></li>
+							<li><a href="#services" data-i18n="navServices">服务能力</a></li>
+							<li><a href="#products" data-i18n="navProducts">产品目录</a></li>
+							<li><a href="#logistics" data-i18n="navLogistics">物流查询</a></li>
+							<li><a href="#cta" data-i18n="navContact">联系我们</a></li>
+							<li class="nav-lang">
+								<div class="lang-switch" role="group" data-i18n-aria="langAria">
+									<button type="button" data-lang="zh" aria-pressed="true">中</button>
+									<button type="button" data-lang="en" aria-pressed="false">EN</button>
+								</div>
+							</li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction：公司背景 -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2 data-i18n="introTitle">值得长期托付的供应伙伴</h2>
+										</header>
+										<p data-i18n="introP1">【公司名称】专注企业级产品供应与配套服务，业务覆盖多个核心品类，为经销商、工程配套与企业集采客户提供稳定的货源与透明的价格。</p>
+										<p data-i18n="introP2">我们与上游厂商保持长期合作，支持样品试用、小批量试单与长期框架协议，并可按需提供定制与 OEM 配套，帮助客户降低采购成本、缩短交付周期。</p>
+										<ul class="actions">
+											<li><a href="#products" class="button scrolly" data-i18n="introBtn">浏览产品供应</a></li>
+										</ul>
+									</div>
+									<!-- TODO 占位：替换为公司实景/产品图（方形，318×318 最佳） -->
+									<span class="image"><img src="images/pic01.jpg" alt="公司实景" /></span>
+								</div>
+							</section>
+
+						<!-- First Section：服务能力 -->
+							<section id="services" class="main special">
+								<header class="major">
+									<h2 data-i18n="svcTitle">服务能力</h2>
+								</header>
+								<ul class="features">
+									<li>
+										<span class="icon solid major style1 fa-truck"></span>
+										<h3 data-i18n="svc1Title">产品供应</h3>
+										<p data-i18n="svc1Text">多品类选品与集中采购，提供现货、排产与定制三种供货模式，支持样品试用与小批量试单。</p>
+									</li>
+									<li>
+										<span class="icon solid major style3 fa-boxes"></span>
+										<h3 data-i18n="svc2Title">交付与物流</h3>
+										<p data-i18n="svc2Text">订单全流程跟踪，全国仓储配送，支持指定快递与物流承运商，运单号可随时查询。</p>
+									</li>
+									<li>
+										<span class="icon solid major style5 fa-headset"></span>
+										<h3 data-i18n="svc3Title">售后与支持</h3>
+										<p data-i18n="svc3Text">质保与换补支持，专属业务对接，协助选型与技术确认，工作时段快速响应。</p>
+									</li>
+								</ul>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="#cta" class="button scrolly" data-i18n="svcBtn">联系我们获取方案</a></li>
+									</ul>
+								</footer>
+							</section>
+
+						<!-- Second Section：产品目录 -->
+							<section id="products" class="main">
+								<header class="major">
+									<h2 data-i18n="productsTitle">产品目录</h2>
+									<p data-i18n="productsLead">按分类筛选或搜索关键词，点击「查看详情」查看完整规格参数与服务说明。</p>
+								</header>
+
+								<div class="prod-toolbar">
+									<div class="prod-chips" id="prodChips" role="group"></div>
+									<label class="prod-search">
+										<input id="prodSearch" type="text" autocomplete="off" data-i18n-placeholder="searchPh" data-i18n-aria="searchAria" />
+									</label>
+								</div>
+								<p class="prod-count" id="prodCount" aria-live="polite"></p>
+
+								<ul class="prod-grid" id="prodGrid"></ul>
+								<p class="prod-empty" id="prodEmpty" hidden data-i18n="emptyText">未找到匹配产品 · 换个关键词或分类试试</p>
+
+								<noscript><p class="prod-empty" data-i18n="noscriptGrid">产品列表需要启用 JavaScript 显示；如需产品目录，请致电【联系电话】联系我们。</p></noscript>
+							</section>
+
+						<!-- Third Section：物流查询 -->
+							<section id="logistics" class="main special">
+								<header class="major">
+									<h2 data-i18n="logisticsTitle">物流查询</h2>
+									<p data-i18n-html="logisticsLede">输入运单号，跳转快递100 查询实时物流轨迹<br />自动识别承运商 · 顺丰等个别快递需在其页面按提示验证手机号</p>
+								</header>
+								<form class="track-form" id="trackForm" novalidate>
+									<input id="trackInput" type="text" name="nu" inputmode="search" autocomplete="off" data-i18n-placeholder="trackPh" data-i18n-aria="trackAria" />
+									<button type="submit" class="button primary" data-i18n="trackBtn">查询物流</button>
+								</form>
+								<p class="track-hint" id="trackHint" aria-live="polite" data-i18n="trackHint">本页不收集任何信息，运单号仅在快递100 页面完成查询。</p>
+							</section>
+
+						<!-- Get Started：联系我们 -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2 data-i18n="ctaTitle">获取产品目录与报价方案</h2>
+									<p data-i18n-html="ctaDesc">告诉我们您需要的品类、数量与交付要求，我们在一个工作日内回复报价与样品信息。<br />支持企业集采、工程配套与区域经销合作。</p>
+								</header>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="tel:000-0000-0000" class="button primary" data-i18n="ctaCall">立即联系业务</a></li>
+										<li><a href="mailto:contact@example.com" class="button" data-i18n="ctaMail">发送询价邮件</a></li>
+									</ul>
+								</footer>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2 data-i18n="footerAboutTitle">以稳定供应，赢得长期合作</h2>
+							<p data-i18n="footerAboutText">【公司名称】——一站式企业产品供应与配套服务。从选品、报价到交付与售后，我们以稳定的货源、透明的价格与可靠的服务，成为您值得长期托付的供应伙伴。</p>
+							<ul class="actions">
+								<li><a href="#intro" class="button scrolly" data-i18n="footerAboutBtn">了解公司背景</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2 data-i18n="footerContactTitle">联系方式</h2>
+							<dl class="alt">
+								<dt data-i18n="dtAddress">地址</dt>
+								<dd data-i18n="ddAddress">【公司地址】</dd>
+								<dt data-i18n="dtPhone">电话</dt>
+								<dd><a href="tel:000-0000-0000" data-i18n="ddPhone">【联系电话】</a></dd>
+								<dt data-i18n="dtEmail">邮箱</dt>
+								<dd><a href="mailto:contact@example.com" data-i18n="ddEmail">【联系邮箱】</a></dd>
+								<dt data-i18n="dtHours">工作时间</dt>
+								<dd data-i18n="ddHours">周一至周六 9:00–18:00</dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="tel:000-0000-0000" class="icon solid fa-phone alt" data-i18n-aria="iconAriaPhone"><span class="label">电话</span></a></li>
+								<li><a href="mailto:contact@example.com" class="icon solid fa-envelope alt" data-i18n-aria="iconAriaMail"><span class="label">邮箱</span></a></li>
+								<li><a href="#cta" class="icon solid fa-comments alt scrolly" data-i18n-aria="iconAriaContact"><span class="label">联系我们</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright" data-i18n-html="copyright">&copy; 【公司名称】. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- 产品详情弹窗 -->
+		<dialog class="prod-dialog" id="prodDialog" data-i18n-aria="dialogAria">
+			<div class="prod-dialog-head">
+				<div>
+					<h3 id="prodDialogName"></h3>
+					<p class="prod-dialog-sub" id="prodDialogSub" hidden></p>
+				</div>
+				<button class="prod-dialog-close" id="prodDialogClose" type="button" data-i18n="dialogClose">关闭 ✕</button>
+			</div>
+			<div class="prod-dialog-body" id="prodDialogBody"></div>
+		</dialog>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/products-data.js"></script>
+			<script src="assets/js/site.js"></script>
+			<script src="assets/js/products.js"></script>
+
+	</body>
+</html>

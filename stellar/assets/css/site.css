@@ -1,0 +1,421 @@
+/*
+	单页站扩展样式（在 main.css / custom.css / products.css 之后加载）
+	包含：
+	1) 平滑滚动与锚点避让（固定导航不遮挡分区标题）
+	2) 移动端固定顶栏 + 汉堡按钮 + 导航抽屉（丝滑开合，逐条滑入）
+	3) 语言切换（中 / EN）
+	4) 产品详情弹窗（dialog：淡入上浮 + 遮罩渐显）
+	设计语言对齐 main.css：#f7f7f7 面板 / #dddddd 细线 / #8cc9f0 强调色。
+*/
+
+/* ---------- 锚点避让（固定导航不遮挡分区标题） ---------- */
+
+#main > section[id] {
+	scroll-margin-top: 4.75em;
+}
+
+/* ---------- 移动端顶栏与抽屉（桌面隐藏） ---------- */
+
+.topbar,
+.nav-drawer,
+.nav-backdrop {
+	display: none;
+}
+
+@media screen and (max-width: 736px) {
+
+	body {
+		padding-top: 3.4em;
+	}
+
+	#main > section[id] {
+		scroll-margin-top: 4.25em;
+	}
+
+	/* 固定顶栏 */
+	.topbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75em;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 10001;
+		height: 3.4em;
+		padding: 0 0.9em;
+		background-color: rgba(247, 247, 247, 0.92);
+		-webkit-backdrop-filter: blur(8px);
+		backdrop-filter: blur(8px);
+		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07);
+	}
+
+	.topbar-brand {
+		font-size: 1.02em;
+		color: #636363;
+		border-bottom: 0;
+	}
+
+	.topbar-actions {
+		display: flex;
+		align-items: center;
+		gap: 0.55em;
+	}
+
+	/* 汉堡按钮（线条变形为 ✕） */
+	.hamburger {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.3em;
+		height: 2.3em;
+		padding: 0;
+		border: 0;
+		border-radius: 8px;
+		background: transparent;
+		box-shadow: none;
+		/* 模板对 button 设了 white !important，这里必须覆盖，否则线条不可见 */
+		color: #636363 !important;
+		cursor: pointer;
+		transition: background-color 0.2s ease;
+	}
+
+	.hamburger:hover {
+		background-color: rgba(222, 222, 222, 0.4);
+	}
+
+	.hamburger-box {
+		position: relative;
+		display: block;
+		width: 1.35em;
+		height: 1em;
+	}
+
+	.hamburger-inner,
+	.hamburger-inner:before,
+	.hamburger-inner:after {
+		position: absolute;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 2px;
+		border-radius: 2px;
+		background-color: currentColor;
+		transition: top 0.32s cubic-bezier(0.4, 0, 0.2, 1), transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease;
+	}
+
+	.hamburger-inner {
+		top: 50%;
+		margin-top: -1px;
+	}
+
+	.hamburger-inner:before {
+		content: '';
+		top: -0.42em;
+	}
+
+	.hamburger-inner:after {
+		content: '';
+		top: 0.42em;
+	}
+
+	.hamburger[aria-expanded="true"] .hamburger-inner {
+		background-color: transparent;
+	}
+
+	.hamburger[aria-expanded="true"] .hamburger-inner:before {
+		top: 0;
+		transform: rotate(45deg);
+	}
+
+	.hamburger[aria-expanded="true"] .hamburger-inner:after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+
+	/* 遮罩 */
+	.nav-backdrop {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 9999;
+		background-color: rgba(30, 20, 45, 0.35);
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+	}
+
+	.nav-backdrop.is-open {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	/* 抽屉 */
+	.nav-drawer {
+		display: block;
+		position: fixed;
+		top: 3.4em;
+		left: 0;
+		right: 0;
+		z-index: 10000;
+		background-color: #ffffff;
+		border-radius: 0 0 12px 12px;
+		box-shadow: 0 18px 40px rgba(40, 30, 70, 0.18);
+		overflow: hidden;
+		transform: translateY(-12px);
+		opacity: 0;
+		visibility: hidden;
+		transition: transform 0.34s cubic-bezier(0.22, 0.9, 0.3, 1.05), opacity 0.26s ease, visibility 0.34s ease;
+	}
+
+	.nav-drawer.is-open {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.nav-drawer ul {
+		list-style: none;
+		margin: 0;
+		padding: 0.4em 0 0.55em 0;
+	}
+
+	.nav-drawer li {
+		border-top: solid 1px #f0f0f0;
+		transform: translateY(-6px);
+		opacity: 0;
+		transition: transform 0.32s ease, opacity 0.32s ease;
+	}
+
+	.nav-drawer li:first-child {
+		border-top: 0;
+	}
+
+	.nav-drawer.is-open li {
+		transform: none;
+		opacity: 1;
+	}
+
+	.nav-drawer.is-open li:nth-child(1) { transition-delay: 0.04s; }
+	.nav-drawer.is-open li:nth-child(2) { transition-delay: 0.08s; }
+	.nav-drawer.is-open li:nth-child(3) { transition-delay: 0.12s; }
+	.nav-drawer.is-open li:nth-child(4) { transition-delay: 0.16s; }
+	.nav-drawer.is-open li:nth-child(5) { transition-delay: 0.2s; }
+	.nav-drawer.is-open li:nth-child(6) { transition-delay: 0.24s; }
+
+	.nav-drawer a {
+		display: block;
+		padding: 0.85em 1.25em;
+		color: #636363;
+		border-bottom: 0;
+		font-size: 1.02em;
+	}
+
+	.nav-drawer a:hover {
+		background-color: #f7f7f7;
+	}
+
+}
+
+/* ---------- 语言切换（桌面位于导航条内，移动端位于顶栏） ---------- */
+
+.lang-switch {
+	display: inline-flex;
+	align-items: center;
+	padding: 2px;
+	border-radius: 8px;
+	background-color: rgba(222, 222, 222, 0.35);
+}
+
+.lang-switch button {
+	appearance: none;
+	-webkit-appearance: none;
+	border: 0;
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.82em;
+	line-height: 1;
+	padding: 0.55em 0.75em;
+	border-radius: 6px;
+	min-width: 0;
+	background-color: transparent;
+	box-shadow: none;
+	color: #8a8a8a !important;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-switch button:hover {
+	color: #636363 !important;
+}
+
+.lang-switch button[aria-pressed="true"] {
+	background-color: #ffffff;
+	color: #636363 !important;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+#nav .nav-lang {
+	margin-left: 0.2em;
+}
+
+#nav .lang-switch {
+	vertical-align: middle;
+}
+
+/* ---------- 产品详情弹窗 ---------- */
+
+.prod-dialog {
+	display: none;
+	flex-direction: column;
+	border: 0;
+	border-radius: 10px;
+	padding: 0;
+	width: min(46em, calc(100% - 2em));
+	max-height: min(86vh, 62em);
+	background-color: #ffffff;
+	color: #636363;
+	box-shadow: 0 30px 80px rgba(25, 15, 50, 0.38);
+	overflow: hidden;
+}
+
+.prod-dialog[open] {
+	display: flex;
+	animation: prod-dialog-in 0.3s cubic-bezier(0.22, 0.9, 0.3, 1.05);
+}
+
+.prod-dialog::backdrop {
+	background-color: rgba(35, 25, 60, 0.45);
+}
+
+.prod-dialog[open]::backdrop {
+	animation: prod-backdrop-in 0.3s ease;
+}
+
+@keyframes prod-dialog-in {
+
+	from {
+		opacity: 0;
+		transform: translateY(16px) scale(0.975);
+	}
+
+}
+
+@keyframes prod-backdrop-in {
+
+	from {
+		opacity: 0;
+	}
+
+}
+
+.prod-dialog-head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1em;
+	padding: 1em 1.5em;
+	background-color: #fbfbfd;
+	border-bottom: solid 1px #ececec;
+}
+
+.prod-dialog-head h3 {
+	margin: 0;
+	font-size: 1.2em;
+}
+
+/* 模板对全局 h1–h6 设了白色（深色背景用），弹窗是浅色卡片，需恢复为卡片文字色 */
+.prod-dialog h1,
+.prod-dialog h2,
+.prod-dialog h3,
+.prod-dialog h4,
+.prod-dialog h5,
+.prod-dialog h6 {
+	color: inherit;
+}
+
+.prod-dialog-sub {
+	margin: 0.2em 0 0 0;
+	font-size: 0.82em;
+	color: #9a9a9a;
+}
+
+.prod-dialog-close {
+	flex: 0 0 auto;
+	appearance: none;
+	-webkit-appearance: none;
+	border: 0;
+	cursor: pointer;
+	font: inherit;
+	font-size: 0.85em;
+	line-height: 1;
+	min-width: 0;
+	padding: 0.65em 1em;
+	border-radius: 8px;
+	background-color: #ffffff;
+	/* 模板对 button 设了 white !important，这里必须覆盖 */
+	color: #636363 !important;
+	box-shadow: inset 0 0 0 1px #dddddd;
+	transition: background-color 0.2s ease;
+}
+
+.prod-dialog-close:hover {
+	background-color: rgba(222, 222, 222, 0.25);
+}
+
+.prod-dialog-body {
+	padding: 1.5em 1.6em 1.7em 1.6em;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.prod-dialog-body h2 {
+	font-size: 1.25em;
+	margin: 1.6em 0 0.6em 0;
+}
+
+.prod-dialog-body h2:first-of-type {
+	margin-top: 1.4em;
+}
+
+.prod-dialog-body .prod-banner {
+	margin-bottom: 0;
+}
+
+/* 打开弹窗 / 抽屉时锁定页面滚动 */
+body.is-locked {
+	overflow: hidden;
+}
+
+/* 英文下恢复模板的紧字距（custom.css 为中文归零） */
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3,
+html[lang="en"] h4,
+html[lang="en"] h5,
+html[lang="en"] h6,
+html[lang="en"] #header p {
+	letter-spacing: -0.025em;
+}
+
+/* ---------- 动效降级 ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+	.topbar,
+	.nav-drawer,
+	.nav-drawer li,
+	.nav-backdrop,
+	.hamburger-inner,
+	.hamburger-inner:before,
+	.hamburger-inner:after,
+	.prod-dialog[open],
+	.prod-dialog[open]::backdrop {
+		animation: none !important;
+		transition: none !important;
+	}
+
+}
